@@ -1,0 +1,36 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src="webcam.js"></script>
+<script src="rps-dataset.js"></script>
+</head>
+<body style="margin-left: auto; margin-right: auto">
+	<h1 style="font-family: 'Lato'; color: cadetblue">Rock Paper Scissors Lizard Spock</h1>
+	<div>
+		<div>
+			<video autoplay playsinline muted id="wc" width="448" height="448"></video>
+		</div>
+	</div>
+	<button type="button" id="0" onclick="handleButton(this)" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Rock</button>
+	<button type="button" id="1" onclick="handleButton(this)" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Paper</button>
+	<button type="button" id="2" onclick="handleButton(this)" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Scissors</button>
+	<button type="button" id="3" onclick="handleButton(this)" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Spock</button>
+	<button type="button" id="4" onclick="handleButton(this)" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Lizard</button>
+	<br>
+	<div id="rocksamples" style="font-family: 'Ubuntu'">Rock Samples:</div>
+	<div id="papersamples" style="font-family: 'Ubuntu'">Paper Samples:</div>
+	<div id="scissorssamples" style="font-family: 'Ubuntu'">Scissors Samples:</div>
+	<div id="spocksamples" style="font-family: 'Ubuntu'">Spock Samples:</div>
+	<div id="lizardsamples" style="font-family: 'Ubuntu'">Lizard Samples:</div>
+	<br>
+	<button type="button" id="train" onclick="doTraining()" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Train Network</button> 
+	<div id="dummy" style="font-family: 'Ubuntu'">Once training is complete, click 'Start Predicting' to see predictions, and 'Stop Predicting' to end.</div>
+	<button type="button" id="startPredicting" onclick="startPredicting()" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Start Predicting</button>
+	<button type="button" id="stopPredicting" onclick="stopPredicting()" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Stop Predicting</button>
+    <button type="button" id="saveModel" onclick="saveModel()" style="font-family: 'Ubuntu'; background-color: cadetblue; color: white; font-size: 20px; border: 2px solid white">Download Model</button>
+	<div id="prediction" style="font-family: 'Ubuntu'; font-size: 20px"></div>
+</body>
+
+<script src="index_exercise.js"></script>
+</html>
